@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Birth Control",
+    "slug": "/gynecology/birth-control",
+    "category": "Gynecology",
+    "syn": ["contraception", "pills", "iud", "implant", "family planning"]
+  },
+  {
+    "name": "Endometriosis",
+    "slug": "/gynecology/endometriosis",
+    "category": "Gynecology",
+    "syn": ["endometrial", "pelvic pain", "infertility", "adhesions"]
+  },
+  {
+    "name": "Fibroids",
+    "slug": "/gynecology/fibroids",
+    "category": "Gynecology",
+    "syn": ["leiomyoma", "heavy periods", "bleeding", "uterine", "myoma"]
+  },
+  {
+    "name": "Incontinence",
+    "slug": "/gynecology/incontinence",
+    "category": "Gynecology",
+    "syn": ["urinary", "bladder", "leakage", "pelvic floor"]
+  },
+  {
+    "name": "Menopause",
+    "slug": "/gynecology/menopause",
+    "category": "Gynecology",
+    "syn": ["hormone", "hot flashes", "hrt", "perimenopause"]
+  },
+  {
+    "name": "Menstrual Disorders",
+    "slug": "/gynecology/menstrual-disorders",
+    "category": "Gynecology",
+    "syn": ["irregular periods", "heavy bleeding", "painful periods", "pms"]
+  },
+  {
+    "name": "Ovarian Cysts",
+    "slug": "/gynecology/ovarian-cysts",
+    "category": "Gynecology",
+    "syn": ["ovary", "cyst", "mass", "tumor"]
+  },
+  {
+    "name": "Pelvic Pain",
+    "slug": "/gynecology/pelvic-pain",
+    "category": "Gynecology",
+    "syn": ["chronic pain", "pelvic", "painful intercourse", "dyspareunia"]
+  },
+  {
+    "name": "PCOS",
+    "slug": "/gynecology/pcos",
+    "category": "Gynecology",
+    "syn": ["polycystic ovary", "hormonal", "weight", "acne", "hirsutism"]
+  },
+  {
+    "name": "UTI",
+    "slug": "/gynecology/uti",
+    "category": "Gynecology",
+    "syn": ["urinary tract infection", "bladder infection", "burning", "frequency"]
+  },
+  {
+    "name": "Vaginitis",
+    "slug": "/gynecology/vaginitis",
+    "category": "Gynecology",
+    "syn": ["vaginal infection", "yeast", "bacterial", "discharge", "itching"]
+  },
+  {
+    "name": "Vulvar Disorders",
+    "slug": "/gynecology/vulvar-disorders",
+    "category": "Gynecology",
+    "syn": ["vulvar", "skin", "dermatosis", "lichen", "itching"]
+  },
+  {
+    "name": "Hysteroscopy",
+    "slug": "/gynecology/hysteroscopy",
+    "category": "Gynecology",
+    "syn": ["hysteroscope", "uterine", "polyps", "abnormal bleeding"]
+  },
+  {
+    "name": "Laparoscopy",
+    "slug": "/gynecology/laparoscopy",
+    "category": "Gynecology",
+    "syn": ["laparoscopic", "minimally invasive", "surgery", "keyhole"]
+  },
+  {
+    "name": "NovaSure Ablation",
+    "slug": "/gynecology/novasure-ablation",
+    "category": "Gynecology",
+    "syn": ["endometrial ablation", "heavy bleeding", "novasure"]
+  },
+  {
+    "name": "MonaLisa Touch",
+    "slug": "/gynecology/monalisa-touch",
+    "category": "Gynecology",
+    "syn": ["vaginal laser", "dryness", "painful intercourse", "urinary"]
+  },
+  {
+    "name": "Botox & Fillers",
+    "slug": "/aesthetics/botox-fillers",
+    "category": "Aesthetics",
+    "syn": ["botox", "dermal fillers", "wrinkles", "injectables", "anti-aging"]
+  },
+  {
+    "name": "Chin Liposuction",
+    "slug": "/aesthetics/chin-liposuction",
+    "category": "Aesthetics",
+    "syn": ["chin", "neck", "liposuction", "double chin", "contouring"]
+  },
+  {
+    "name": "Laser Hair Removal",
+    "slug": "/aesthetics/laser-hair-removal",
+    "category": "Aesthetics",
+    "syn": ["hair removal", "laser", "permanent", "unwanted hair"]
+  },
+  {
+    "name": "Lumecca",
+    "slug": "/aesthetics/lumecca",
+    "category": "Aesthetics",
+    "syn": ["ipl", "intense pulsed light", "sun damage", "age spots", "pigmentation"]
+  },
+  {
+    "name": "Morpheus8",
+    "slug": "/aesthetics/morpheus8",
+    "category": "Aesthetics",
+    "syn": ["microneedling", "radiofrequency", "skin tightening", "texture"]
+  },
+  {
+    "name": "PRP Hair Restoration",
+    "slug": "/aesthetics/prp-hair-restoration",
+    "category": "Aesthetics",
+    "syn": ["prp", "platelet rich plasma", "hair loss", "baldness", "thinning"]
+  },
+  {
+    "name": "PRP (Skin)",
+    "slug": "/aesthetics/prp-skin",
+    "category": "Aesthetics",
+    "syn": ["prp facial", "vampire facial", "skin rejuvenation", "platelet"]
+  },
+  {
+    "name": "Skin Tightening",
+    "slug": "/aesthetics/skin-tightening",
+    "category": "Aesthetics",
+    "syn": ["tightening", "lifting", "radiofrequency", "ultrasound", "sagging"]
+  },
+  {
+    "name": "Labiaplasty",
+    "slug": "/cosmetic-gyn/labiaplasty",
+    "category": "Cosmetic Gynecology",
+    "syn": ["labia", "vulva", "cosmetic", "reshaping", "reduction"]
+  },
+  {
+    "name": "Vaginal Revitalization",
+    "slug": "/cosmetic-gyn/vaginal-revitalization",
+    "category": "Cosmetic Gynecology",
+    "syn": ["vaginal rejuvenation", "laxity", "tightening", "non-surgical"]
+  },
+  {
+    "name": "Vaginoplasty",
+    "slug": "/cosmetic-gyn/vaginoplasty",
+    "category": "Cosmetic Gynecology",
+    "syn": ["vaginal tightening", "surgical", "reconstruction", "tightening"]
+  },
+  {
+    "name": "Sexual Orgasm Surgeries",
+    "slug": "/cosmetic-gyn/sexual-orgasm-surgeries",
+    "category": "Cosmetic Gynecology",
+    "syn": ["sexual function", "orgasm", "sensation", "enhancement"]
+  },
+  {
+    "name": "MonaLisa Touch",
+    "slug": "/cosmetic-gyn/monalisa-touch",
+    "category": "Cosmetic Gynecology",
+    "syn": ["vaginal laser", "dryness", "painful intercourse", "sexual function"]
+  }
+]

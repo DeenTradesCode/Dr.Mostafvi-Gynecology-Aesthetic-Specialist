@@ -1,6 +1,6 @@
-# Dr. Noreen Kamal-Mostafavi, MD PLLC Website
+# Dr. Noreen Mostafavi - OB/GYN & Aesthetics Website
 
-A modern, accessible Next.js website for Dr. Noreen Kamal-Mostafavi's women's health and wellness practice in Staten Island, NY.
+A production-ready Next.js 14 web application for Dr. Noreen Mostafavi's women's health and aesthetics practice in Staten Island, NY.
 
 ## 🚀 Quick Start
 
@@ -12,115 +12,155 @@ npm install
 npm run dev
 
 # Build for production
-npm run build
-
-# Start production server
-npm start
+npm run build && npm start
 ```
 
-## 📋 Features
+## 📋 Project Overview
+
+This is a modern, conversion-focused website featuring:
 
 - **Next.js 14** with App Router and TypeScript
-- **Responsive Design** - Mobile-first approach
-- **Accessibility** - WCAG 2.1 AA compliant
-- **SEO Optimized** - Structured data and meta tags
-- **Performance** - Optimized for Core Web Vitals
-- **Hero Video** - Background video with fallbacks
-- **Search Functionality** - Fuzzy search across services
-- **Service Pages** - Dynamic pages for all services
+- **Tailwind CSS** with custom brand tokens
+- **Mobile-first responsive design**
+- **Advanced search functionality** with fuzzy matching
+- **SEO optimization** with structured data
+- **Accessibility compliance** (WCAG 2.1 AA)
+- **Performance optimized** for Lighthouse scores ≥ 90
 
-## 🏥 Services
+## 🛠️ Tech Stack
 
-### Gynecology
-- Birth Control, Endometriosis, Fibroids, Incontinence
-- Menopause, Menstrual Disorders, Ovarian Cysts, Pelvic Pain
-- PCOS, UTI, Vaginitis, Vulvar Disorders
-- Hysteroscopy, Laparoscopy, NovaSure Ablation, MonaLisa Touch
+- **Next.js 14** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Fuse.js** for fuzzy search
+- **Lucide React** for icons
 
-### Aesthetics
-- Botox & Fillers, Chin Liposuction, Laser Hair Removal
-- Lumecca, Morpheus8, PRP Hair Restoration, PRP (Skin)
-- Skin Tightening
+## 🎨 Design System
 
-### Cosmetic Gynecology
-- Labiaplasty, Vaginal Revitalization, Vaginoplasty
-- Sexual Orgasm Surgeries, MonaLisa Touch
+### Brand Colors
+- **Background**: `#FBFAFB` (soft near-white)
+- **Text**: `#2A2530` (deep charcoal)
+- **Primary Accent**: `#7B4B7F` (modern plum)
+- **Secondary Accent**: `#E9D9EC` (plum tint)
+- **Teal Accent**: `#2E8C89` (clinical balance)
 
-## 🎯 Key Features
+### Typography
+- **Headlines**: Playfair Display (serif)
+- **Body Text**: Inter (sans-serif)
 
-- **Booking-First Design** - Prominent CTAs throughout
-- **Patient Portal Integration** - Direct links to AdvancedMD
-- **Insurance Information** - Comprehensive coverage details
-- **Contact Forms** - Non-PHI contact forms with validation
-- **Search** - Intelligent service search with synonyms
-- **Structured Data** - Rich snippets for better SEO
-
-## 📱 Technical Details
-
-- **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS with custom design system
-- **Components**: Radix UI for accessible components
-- **Search**: Fuse.js for fuzzy search functionality
-- **Icons**: Lucide React for consistent iconography
-- **Performance**: Optimized images, code splitting, prefetching
-
-## 🔧 Development
-
-### Project Structure
+## 📁 Project Structure
 
 ```
-app/                    # Next.js App Router pages
-├── globals.css        # Global styles
-├── layout.tsx         # Root layout
-├── page.tsx          # Home page
-├── gynecology/       # Gynecology services
-├── aesthetics/       # Aesthetic services
-├── cosmetic-gyn/     # Cosmetic gynecology services
-├── insurance-faqs/   # Insurance and FAQs
-├── contact/          # Contact page
-├── privacy/          # Privacy policy
-├── terms/            # Terms of service
-└── accessibility/    # Accessibility statement
-
-components/            # Reusable React components
-├── Header.tsx        # Navigation header
-├── Footer.tsx        # Site footer
-├── HeroVideo.tsx     # Hero section with video
-├── SearchBar.tsx     # Service search component
-└── ServicePageTemplate.tsx  # Template for service pages
-
-data/                 # Static data
-├── services.ts       # Service definitions
-└── searchIndex.json  # Search index data
-
-lib/                  # Utility functions
-└── structured-data.ts # JSON-LD generators
+src/
+├── app/                    # Next.js App Router pages
+│   ├── gynecology/        # Gynecology services
+│   ├── aesthetics/        # Aesthetics services
+│   ├── cosmetic-gyn/      # Cosmetic gynecology
+│   ├── contact/           # Contact page
+│   ├── insurance-faqs/    # Insurance FAQs
+│   └── [legal-pages]/     # Privacy, Terms, Accessibility
+├── components/            # Reusable React components
+├── data/                  # Service data and search index
+└── lib/                   # Utility functions
 ```
 
-### Environment Variables
+## 🔍 Search Functionality
 
-No environment variables are required for this static site. All external links are hardcoded for security.
+The website includes an advanced search system with:
 
-### Scripts
+- **Fuzzy matching** for typos and partial matches
+- **Debounced input** (200ms delay)
+- **Keyboard navigation** (arrow keys, enter, escape)
+- **Accessibility features** (ARIA labels, screen reader support)
+- **Category filtering** with visual pills
+
+## 📱 Features
+
+### Core Features
+- **Hero video** with autoplay and intersection observer
+- **Service categories** with detailed individual pages
+- **Contact form** with validation
+- **Insurance FAQs** with accordion interface
+- **Responsive design** for all devices
+
+### SEO & Performance
+- **Structured data** (JSON-LD) for medical practice
+- **Meta tags** and Open Graph optimization
+- **Image optimization** with Next.js Image component
+- **Lazy loading** for non-critical assets
+- **Performance monitoring** ready
+
+### Accessibility
+- **Semantic HTML** structure
+- **ARIA labels** and roles
+- **Keyboard navigation** support
+- **Focus management** and visible indicators
+- **Screen reader** compatibility
+
+## 🏥 Business Information
+
+- **Practice**: Noreen Kamal-Mostafavi, MD PLLC
+- **Address**: 3860 Victory Blvd, 1st Floor, Staten Island, NY 10314
+- **Phone**: (718) 400-4588
+- **Hours**: Mon–Fri 10–6; Sat–Sun Closed
+- **Patient Portal**: https://patientportal.advancedmd.com/
+
+## 📋 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
-- `npm run start` - Start production server
+- `npm start` - Start production server
 - `npm run lint` - Run ESLint
 - `npm run type-check` - Run TypeScript checks
 
-## 📞 Contact Information
+## 🔧 Configuration
 
-**Noreen Kamal-Mostafavi, MD PLLC**
-- Address: 3860 Victory Blvd, 1st Floor, Staten Island, NY 10314
-- Phone: (718) 400-4588
-- Hours: Mon–Fri 10 AM – 6 PM, Sat–Sun Closed
+### Environment Variables
+Create a `.env.local` file (see `env.local.example`):
 
-## 🔗 Important Links
+```bash
+# No secrets required for this project
+# All configuration is handled in the code
+```
 
-- **Patient Portal**: https://patientportal.advancedmd.com/
-- **Emergency**: Call 911 or go to nearest emergency room
+### Tailwind Configuration
+Custom brand tokens are defined in `tailwind.config.js`:
+
+```javascript
+colors: {
+  bg: '#FBFAFB',
+  ink: '#2A2530',
+  accent: '#7B4B7F',
+  'accent-2': '#E9D9EC',
+  teal: '#2E8C89',
+}
+```
+
+## 📊 Performance
+
+The website is optimized for:
+
+- **Lighthouse Mobile Score**: ≥ 90
+- **Core Web Vitals**: Optimized
+- **Bundle Size**: Minimized with code splitting
+- **Image Optimization**: Next.js Image component
+- **Font Loading**: Optimized with preconnect
+
+## 🔒 Security
+
+- **Content Security Policy** headers
+- **X-Frame-Options**: DENY
+- **X-Content-Type-Options**: nosniff
+- **Referrer-Policy**: origin-when-cross-origin
 
 ## 📄 License
 
-This project is proprietary and confidential. All rights reserved.
+This project is proprietary and confidential.
+
+## 🤝 Support
+
+For technical support or questions about this website, please contact the development team.
+
+---
+
+**Built with ❤️ for Dr. Noreen Mostafavi's practice**

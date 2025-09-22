@@ -1,8 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/gynecology/page": "app/gynecology/page.js",
-  "/not-found": "app/not-found.js",
-  "/icon/[[...__metadata_id__]]/route": "app/icon/[[...__metadata_id__]]/route.js",
-  "/gynecology/[slug]/page": "app/gynecology/[slug]/page.js"
-}

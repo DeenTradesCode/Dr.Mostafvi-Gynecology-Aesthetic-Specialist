@@ -116,7 +116,7 @@ The website includes an advanced search system with:
 ## 🔧 Configuration
 
 ### Environment Variables
-Create a `.env.local` file (see `.env.local.example`):
+Create a `.env.local` file (see `env.local.example`):
 
 ```bash
 # No secrets required for this project

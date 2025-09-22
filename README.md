@@ -1,80 +1,126 @@
-# 🏥 Dr. Mastafavi Website
+# Dr. Noreen Kamal-Mostafavi, MD PLLC Website
 
-A modern, mobile-first website for Dr. Noreen Mastafavi's Gynecology & Aesthetic practice.
+A modern, accessible Next.js website for Dr. Noreen Kamal-Mostafavi's women's health and wellness practice in Staten Island, NY.
 
 ## 🚀 Quick Start
 
 ```bash
 # Install dependencies
-pnpm install
+npm install
 
 # Start development server
-pnpm dev
+npm run dev
 
 # Build for production
-pnpm build
+npm run build
+
+# Start production server
+npm start
 ```
 
-## 📋 Project Overview
+## 📋 Features
 
-This is a React-based single-page application prototype featuring:
+- **Next.js 14** with App Router and TypeScript
+- **Responsive Design** - Mobile-first approach
+- **Accessibility** - WCAG 2.1 AA compliant
+- **SEO Optimized** - Structured data and meta tags
+- **Performance** - Optimized for Core Web Vitals
+- **Hero Video** - Background video with fallbacks
+- **Search Functionality** - Fuzzy search across services
+- **Service Pages** - Dynamic pages for all services
 
-- **Mobile-first design** with responsive layouts
-- **Dark/light mode** support
-- **SEO optimization** with structured data
-- **Accessibility compliance** (WCAG 2.1 AA)
-- **Performance focused** with < 200KB bundle size
+## 🏥 Services
 
-## 🛠️ Tech Stack
+### Gynecology
+- Birth Control, Endometriosis, Fibroids, Incontinence
+- Menopause, Menstrual Disorders, Ovarian Cysts, Pelvic Pain
+- PCOS, UTI, Vaginitis, Vulvar Disorders
+- Hysteroscopy, Laparoscopy, NovaSure Ablation, MonaLisa Touch
 
-- **React 18.2+** with TypeScript
-- **Vite** for fast development and building
-- **Tailwind CSS** for styling
-- **Framer Motion** for animations
-- **React Router** for navigation
+### Aesthetics
+- Botox & Fillers, Chin Liposuction, Laser Hair Removal
+- Lumecca, Morpheus8, PRP Hair Restoration, PRP (Skin)
+- Skin Tightening
 
-## 📚 Documentation
-
-All detailed documentation is available in the [`docs/`](./docs/) directory:
-
-- **[Project Overview](./docs/project-overview.md)** - Goals, features, and success metrics
-- **[Design System](./docs/design-system.md)** - Colors, typography, and visual guidelines
-- **[Technical Requirements](./docs/technical-requirements.md)** - Setup, dependencies, and performance
-- **[Component Architecture](./docs/component-architecture.md)** - React components and structure
-- **[User Experience](./docs/user-experience.md)** - UX patterns and accessibility
-- **[SEO Strategy](./docs/seo-strategy.md)** - Search optimization approach
-- **[Development Guidelines](./docs/development-guidelines.md)** - Coding standards and practices
+### Cosmetic Gynecology
+- Labiaplasty, Vaginal Revitalization, Vaginoplasty
+- Sexual Orgasm Surgeries, MonaLisa Touch
 
 ## 🎯 Key Features
 
-- **Service Information** - Detailed gynecology and aesthetic services
-- **Doctor Profile** - Professional background and credentials
-- **Appointment Booking** - Easy scheduling and contact options
-- **Insurance Information** - Accepted plans and coverage verification
-- **Patient Testimonials** - Social proof and patient experiences
+- **Booking-First Design** - Prominent CTAs throughout
+- **Patient Portal Integration** - Direct links to AdvancedMD
+- **Insurance Information** - Comprehensive coverage details
+- **Contact Forms** - Non-PHI contact forms with validation
+- **Search** - Intelligent service search with synonyms
+- **Structured Data** - Rich snippets for better SEO
 
-## 📱 Mobile-First Design
+## 📱 Technical Details
 
-- Responsive layouts optimized for mobile devices
-- Touch-friendly interactions and gestures
-- Fast loading with optimized images and code splitting
-- Accessible navigation and form interactions
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS with custom design system
+- **Components**: Radix UI for accessible components
+- **Search**: Fuse.js for fuzzy search functionality
+- **Icons**: Lucide React for consistent iconography
+- **Performance**: Optimized images, code splitting, prefetching
 
 ## 🔧 Development
 
-### Prerequisites
+### Project Structure
 
-- Node.js 18+
-- pnpm 8+
+```
+app/                    # Next.js App Router pages
+├── globals.css        # Global styles
+├── layout.tsx         # Root layout
+├── page.tsx          # Home page
+├── gynecology/       # Gynecology services
+├── aesthetics/       # Aesthetic services
+├── cosmetic-gyn/     # Cosmetic gynecology services
+├── insurance-faqs/   # Insurance and FAQs
+├── contact/          # Contact page
+├── privacy/          # Privacy policy
+├── terms/            # Terms of service
+└── accessibility/    # Accessibility statement
 
-### Available Scripts
+components/            # Reusable React components
+├── Header.tsx        # Navigation header
+├── Footer.tsx        # Site footer
+├── HeroVideo.tsx     # Hero section with video
+├── SearchBar.tsx     # Service search component
+└── ServicePageTemplate.tsx  # Template for service pages
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm preview` - Preview production build
-- `pnpm lint` - Run ESLint
-- `pnpm type-check` - Run TypeScript checks
+data/                 # Static data
+├── services.ts       # Service definitions
+└── searchIndex.json  # Search index data
+
+lib/                  # Utility functions
+└── structured-data.ts # JSON-LD generators
+```
+
+### Environment Variables
+
+No environment variables are required for this static site. All external links are hardcoded for security.
+
+### Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript checks
+
+## 📞 Contact Information
+
+**Noreen Kamal-Mostafavi, MD PLLC**
+- Address: 3860 Victory Blvd, 1st Floor, Staten Island, NY 10314
+- Phone: (718) 400-4588
+- Hours: Mon–Fri 10 AM – 6 PM, Sat–Sun Closed
+
+## 🔗 Important Links
+
+- **Patient Portal**: https://patientportal.advancedmd.com/
+- **Emergency**: Call 911 or go to nearest emergency room
 
 ## 📄 License
 
-This project is proprietary and confidential.
+This project is proprietary and confidential. All rights reserved.

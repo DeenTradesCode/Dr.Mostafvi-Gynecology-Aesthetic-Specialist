@@ -48,4 +48,8 @@ module.exports = {
     },
   },
   plugins: [],
+  // Tailwind CSS 4+ optimizations
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 }

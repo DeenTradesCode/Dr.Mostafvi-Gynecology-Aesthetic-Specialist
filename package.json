@@ -1,13 +1,15 @@
 {
   "name": "dr-mostafavi-website",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Dr. Noreen Mostafavi - OB/GYN & Aesthetics Website - Next.js 15 with React 19 and TypeScript 5.9",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "clsx": "^2.0.0",
@@ -29,5 +31,22 @@
     "prettier": "^3.6.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.2"
-  }
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "medical",
+    "gynecology",
+    "aesthetics",
+    "healthcare",
+    "website"
+  ],
+  "author": "Dr. Noreen Mostafavi",
+  "license": "UNLICENSED"
 }

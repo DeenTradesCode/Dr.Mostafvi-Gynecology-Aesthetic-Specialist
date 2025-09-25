@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
-import { services } from '@/data/services'
+import { allServices } from '@/data/services'
 
 interface PageProps {
   params: {
@@ -10,15 +10,15 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return services
+  return allServices
     .filter(service => service.category === 'aesthetics')
     .map((service) => ({
-      slug: service.id,
+      slug: service.slug,
     }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const service = services.find(s => s.id === params.slug && s.category === 'aesthetics')
+  const service = allServices.find(s => s.slug === params.slug && s.category === 'aesthetics')
   
   if (!service) {
     return {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default function ServicePage({ params }: PageProps) {
-  const service = services.find(s => s.id === params.slug && s.category === 'aesthetics')
+  const service = allServices.find(s => s.slug === params.slug && s.category === 'aesthetics')
 
   if (!service) {
     notFound()

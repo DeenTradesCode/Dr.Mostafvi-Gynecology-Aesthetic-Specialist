@@ -45,7 +45,7 @@ export function Hero() {
               className="mb-8 flex flex-wrap justify-center gap-4 lg:justify-start"
             >
               {['Gynecology', 'Aesthetic Medicine', 'Cosmetic Procedures'].map(
-                (specialty, index) => (
+                (specialty) => (
                   <span
                     key={specialty}
                     className="rounded-full bg-blush-rose/10 px-4 py-2 text-sm font-medium text-blush-rose dark:bg-blush-rose/20"

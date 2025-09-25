@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, Calendar } from 'lucide-react'
 import { useTheme } from '@/hooks/useTheme'
-import { cn } from '@/utils'
+// import { cn } from '@/utils' // Unused import removed
 
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

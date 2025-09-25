@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: dr-mostafavi-website
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /
+    autoDeploy: true
+    branch: mockup-2-render

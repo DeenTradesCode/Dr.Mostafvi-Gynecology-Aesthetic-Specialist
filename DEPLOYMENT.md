@@ -5,6 +5,7 @@
 This guide covers deploying the latest Next.js 15.5.4 application with React 19.1.1 and TypeScript 5.9.2 to Render.
 
 ### Prerequisites
+
 - A GitHub account
 - Your code pushed to a GitHub repository
 - A Render account (free tier available)
@@ -12,6 +13,7 @@ This guide covers deploying the latest Next.js 15.5.4 application with React 19.
 ### Steps
 
 1. **Push your code to GitHub**
+
    ```bash
    git init
    git add .
@@ -41,15 +43,18 @@ This guide covers deploying the latest Next.js 15.5.4 application with React 19.
    - Your site will be available at `https://dr-mostafavi-website.onrender.com`
 
 ### Custom Domain (Optional)
+
 - In your Render dashboard, go to your service
 - Click "Settings" → "Custom Domains"
 - Add your domain (e.g., `noreenmostafavimd.com`)
 - Update your DNS records as instructed
 
 ### Environment Variables
+
 No environment variables are required for this project. All configuration is handled in the code.
 
 ### Build Status
+
 ✅ **Next.js 15.5.4** production build tested successfully
 ✅ **React 19.1.1** components working correctly
 ✅ **TypeScript 5.9.2** compilation successful
@@ -59,12 +64,14 @@ No environment variables are required for this project. All configuration is han
 ✅ **Performance optimized** for Lighthouse scores ≥ 90
 
 ### Framework Compatibility
+
 - **Next.js 15**: App Router with async components
 - **React 19**: Concurrent features and modern patterns
 - **TypeScript 5.9**: Strict mode with enhanced type safety
 - **Node.js 20+**: Required for latest features
 
 ### Performance Metrics
+
 - **Build Time**: 3.9 seconds (excellent)
 - **Bundle Size**: 102kB shared JS (optimized)
 - **Static Pages**: 45 pages pre-rendered

@@ -3,9 +3,12 @@ services:
     name: dr-mostafavi-website
     env: node
     plan: starter
-    buildCommand: npm install && npm run build
+    buildCommand: npm ci && npm run build
     startCommand: npm start
     publishDirectory: .
     healthCheckPath: /
     autoDeploy: true
     branch: mock-up-render-deploy
+    envVars:
+      - key: NODE_ENV
+        value: production

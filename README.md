@@ -32,22 +32,26 @@ This is a modern, conversion-focused website featuring:
 ## 🛠️ Tech Stack
 
 ### Core Framework
+
 - **Next.js 15.5.4** with App Router (latest)
 - **React 19.1.1** with modern patterns
 - **TypeScript 5.9.2** with strict mode
 - **Node.js 20+** runtime
 
 ### Styling & UI
+
 - **Tailwind CSS 3.4.0** for styling
 - **Lucide React 0.544.0** for icons
 - **Custom design system** with brand tokens
 
 ### Functionality
+
 - **Fuse.js 7.0.0** for fuzzy search
 - **clsx & tailwind-merge** for conditional styling
 - **Next.js Image** for optimized images
 
 ### Development Tools
+
 - **ESLint 9.36.0** for code quality
 - **Prettier 3.6.2** for code formatting
 - **TypeScript** for type safety
@@ -55,6 +59,7 @@ This is a modern, conversion-focused website featuring:
 ## 🎨 Design System
 
 ### Brand Colors
+
 - **Background**: `#FBFAFB` (soft near-white)
 - **Text**: `#2A2530` (deep charcoal)
 - **Primary Accent**: `#7B4B7F` (modern plum)
@@ -62,12 +67,14 @@ This is a modern, conversion-focused website featuring:
 - **Teal Accent**: `#2E8C89` (clinical balance)
 
 ### Typography
+
 - **Headlines**: Playfair Display (serif)
 - **Body Text**: Inter (sans-serif)
 
 ## 📁 Project Structure
 
 ```
+
 Dr.Mostafvi-Gynecology-Aesthetic-Specialist/
 ├── app/                    # Next.js 15 App Router (root directory)
 │   ├── gynecology/        # Gynecology services
@@ -105,6 +112,7 @@ The website includes an advanced search system with:
 ## 📱 Features
 
 ### Core Features
+
 - **Hero video** with autoplay and intersection observer
 - **Service categories** with detailed individual pages
 - **Contact form** with validation
@@ -112,6 +120,7 @@ The website includes an advanced search system with:
 - **Responsive design** for all devices
 
 ### SEO & Performance
+
 - **Structured data** (JSON-LD) for medical practice
 - **Meta tags** and Open Graph optimization
 - **Image optimization** with Next.js Image component
@@ -119,6 +128,7 @@ The website includes an advanced search system with:
 - **Performance monitoring** ready
 
 ### Accessibility
+
 - **Semantic HTML** structure
 - **ARIA labels** and roles
 - **Keyboard navigation** support
@@ -131,7 +141,7 @@ The website includes an advanced search system with:
 - **Address**: 3860 Victory Blvd, 1st Floor, Staten Island, NY 10314
 - **Phone**: (718) 400-4588
 - **Hours**: Mon–Fri 10–6; Sat–Sun Closed
-- **Patient Portal**: https://patientportal.advancedmd.com/
+- **Patient Portal**: <https://patientportal.advancedmd.com/>
 
 ## 📋 Available Scripts
 
@@ -145,6 +155,7 @@ The website includes an advanced search system with:
 ## 🔧 Configuration
 
 ### Environment Variables
+
 Create a `.env.local` file (see `env.local.example`):
 
 ```bash
@@ -153,6 +164,7 @@ Create a `.env.local` file (see `env.local.example`):
 ```
 
 ### Tailwind Configuration
+
 Custom brand tokens are defined in `tailwind.config.js`:
 
 ```javascript
@@ -178,6 +190,7 @@ The website is optimized for:
 ## 🔒 Security
 
 ### Enhanced Security Headers
+
 - **X-Frame-Options**: DENY
 - **X-Content-Type-Options**: nosniff
 - **X-XSS-Protection**: 1; mode=block
@@ -186,6 +199,7 @@ The website is optimized for:
 - **Strict-Transport-Security**: max-age=31536000; includeSubDomains
 
 ### Next.js 15 Security Features
+
 - **Automatic HTTPS** in production
 - **Secure headers** configuration
 - **Content Security Policy** ready
@@ -194,6 +208,7 @@ The website is optimized for:
 ## 🚀 Latest Framework Features
 
 ### Next.js 15.5.4 Enhancements
+
 - **Async Components**: All page components use async/await patterns
 - **Enhanced Metadata API**: Dynamic metadata generation
 - **Improved Image Optimization**: WebP/AVIF support
@@ -201,18 +216,21 @@ The website is optimized for:
 - **Server Actions**: Ready for form handling
 
 ### React 19.1.1 Features
+
 - **Concurrent Features**: Automatic batching and transitions
 - **Improved Hydration**: Better SSR/CSR consistency
 - **Enhanced Error Boundaries**: Better error handling
 - **Modern Hooks**: Latest React patterns
 
 ### TypeScript 5.9.2 Standards
+
 - **Strict Mode**: Enhanced type checking
 - **Exact Optional Properties**: Better type safety
 - **No Unchecked Indexed Access**: Safer array/object access
 - **Force Consistent Casing**: Better file naming
 
 ### Code Standards Compliance
+
 - **ESLint 9.36.0**: Latest linting rules
 - **Accessibility**: WCAG 2.1 AA compliant
 - **Performance**: Lighthouse scores ≥ 90
@@ -223,7 +241,7 @@ The website is optimized for:
 
 This project is proprietary and confidential.
 
-## 🤝 Support
+<!-- ## 🤝 Support -->
 
 For technical support or questions about this website, please contact the development team.
 

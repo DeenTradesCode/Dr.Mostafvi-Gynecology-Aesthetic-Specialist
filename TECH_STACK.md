@@ -7,6 +7,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 ## 📦 Core Dependencies
 
 ### Framework & Runtime
+
 ```json
 {
   "next": "15.5.4",           // Latest Next.js with App Router
@@ -17,6 +18,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 ```
 
 ### Styling & UI
+
 ```json
 {
   "tailwindcss": "^3.4.0",    // Utility-first CSS framework
@@ -27,6 +29,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 ```
 
 ### Functionality
+
 ```json
 {
   "fuse.js": "^7.0.0",        // Fuzzy search library
@@ -36,6 +39,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 ```
 
 ### Development Tools
+
 ```json
 {
   "eslint": "^9.36.0",                    // Code linting
@@ -49,6 +53,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 ## 🏛️ Framework Architecture
 
 ### Next.js 15.5.4 App Router
+
 - **File-based routing** in `/app` directory
 - **Server Components** by default for better performance
 - **Client Components** with `"use client"` directive
@@ -58,6 +63,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 - **Static Site Generation** for optimal performance
 
 ### React 19.1.1 Features
+
 - **Concurrent Rendering** for better user experience
 - **Automatic Batching** of state updates
 - **Suspense** for loading states
@@ -65,6 +71,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 - **Modern Hooks** patterns
 
 ### TypeScript 5.9.2 Configuration
+
 ```json
 {
   "compilerOptions": {
@@ -94,6 +101,7 @@ This Dr. Mostafavi Gynecology & Aesthetic Specialist website is built with the l
 ## 🎨 Design System
 
 ### Tailwind CSS 3.4.0 Configuration
+
 ```javascript
 module.exports = {
   content: [
@@ -134,6 +142,7 @@ module.exports = {
 ```
 
 ### Brand Colors
+
 - **Background**: `#FBFAFB` (soft near-white)
 - **Text**: `#2A2530` (deep charcoal)
 - **Primary**: `#7B4B7F` (modern plum)
@@ -143,6 +152,7 @@ module.exports = {
 ## 🔍 Search Implementation
 
 ### Fuse.js 7.0.0 Configuration
+
 ```typescript
 const fuse = new Fuse(services, {
   keys: ['name', 'description', 'category'],
@@ -153,6 +163,7 @@ const fuse = new Fuse(services, {
 ```
 
 ### Search Features
+
 - **Fuzzy matching** for typos and partial matches
 - **Debounced input** (200ms delay)
 - **Keyboard navigation** (arrow keys, enter, escape)
@@ -162,6 +173,7 @@ const fuse = new Fuse(services, {
 ## 🚀 Performance Optimization
 
 ### Next.js Optimizations
+
 - **Static Site Generation** for all pages
 - **Image Optimization** with WebP/AVIF
 - **Code Splitting** automatic
@@ -169,6 +181,7 @@ const fuse = new Fuse(services, {
 - **Font Optimization** with preconnect
 
 ### Performance Metrics
+
 - **Build Time**: 3.9 seconds
 - **Bundle Size**: 102kB shared JS
 - **Static Pages**: 45 pages
@@ -177,6 +190,7 @@ const fuse = new Fuse(services, {
 ## 🔒 Security Implementation
 
 ### Enhanced Security Headers
+
 ```javascript
 const securityHeaders = [
   {
@@ -209,11 +223,13 @@ const securityHeaders = [
 ## 📱 Responsive Design
 
 ### Breakpoints
+
 - **Mobile**: 320px - 768px
 - **Tablet**: 768px - 1024px
 - **Desktop**: 1024px+
 
 ### Mobile-First Approach
+
 - **Tailwind CSS** responsive utilities
 - **Flexible layouts** with CSS Grid and Flexbox
 - **Touch-friendly** interface elements
@@ -222,6 +238,7 @@ const securityHeaders = [
 ## ♿ Accessibility Standards
 
 ### WCAG 2.1 AA Compliance
+
 - **Semantic HTML** structure
 - **ARIA labels** and roles
 - **Keyboard navigation** support
@@ -232,6 +249,7 @@ const securityHeaders = [
 ## 🔧 Development Workflow
 
 ### Available Scripts
+
 ```bash
 npm run dev          # Development server with hot reload
 npm run build        # Production build
@@ -242,6 +260,7 @@ npm run format       # Prettier code formatting
 ```
 
 ### Code Quality Standards
+
 - **ESLint 9.36.0** with Next.js configuration
 - **TypeScript 5.9.2** strict mode
 - **Prettier** code formatting
@@ -250,6 +269,7 @@ npm run format       # Prettier code formatting
 ## 📊 SEO Implementation
 
 ### Metadata API
+
 - **Dynamic metadata** generation
 - **Open Graph** tags
 - **Twitter Cards** support
@@ -258,6 +278,7 @@ npm run format       # Prettier code formatting
 - **Robots.txt** configuration
 
 ### Performance SEO
+
 - **Core Web Vitals** optimization
 - **Lighthouse** scores ≥ 90
 - **Image optimization** with alt text
@@ -266,6 +287,7 @@ npm run format       # Prettier code formatting
 ## 🚀 Deployment Ready
 
 ### Render Configuration
+
 - **Node.js 20+** runtime
 - **Static site generation**
 - **Automatic HTTPS**
@@ -273,6 +295,7 @@ npm run format       # Prettier code formatting
 - **Environment variables** ready
 
 ### Build Process
+
 1. **Dependency installation** (`npm install`)
 2. **TypeScript compilation** (`tsc --noEmit`)
 3. **ESLint validation** (optional)

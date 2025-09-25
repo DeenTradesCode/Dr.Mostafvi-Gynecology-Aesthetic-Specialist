@@ -30,7 +30,7 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section className="section-spacing bg-neutral-50">
+    <section id="procedures" className="section-spacing bg-neutral-50">
       <div className="mx-auto max-w-7xl container-padding">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">

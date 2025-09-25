@@ -5,7 +5,7 @@ import { gynecologyServices } from '@/data/services'
 import { generateServiceJsonLd } from '@/lib/structured-data'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = gynecologyServices.find(s => s.slug === params.slug)
+  const { slug } = await params
+  const service = gynecologyServices.find(s => s.slug === slug)
   
   if (!service) {
     return {
@@ -30,8 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function GynecologyServicePage({ params }: Props) {
-  const service = gynecologyServices.find(s => s.slug === params.slug)
+export default async function GynecologyServicePage({ params }: Props) {
+  const { slug } = await params
+  const service = gynecologyServices.find(s => s.slug === slug)
 
   if (!service) {
     notFound()
@@ -50,7 +52,7 @@ export default function GynecologyServicePage({ params }: Props) {
         description={service.description}
         whatItHelps={service.whatItHelps}
         howItWorks={service.howItWorks}
-        visitTime={service.visitTime}
+        {...(service.visitTime && { visitTime: service.visitTime })}
       />
     </>
   )

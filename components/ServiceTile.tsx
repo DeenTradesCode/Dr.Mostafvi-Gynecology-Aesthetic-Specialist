@@ -15,7 +15,7 @@ export default function ServiceTile({ service }: ServiceTileProps) {
         {service.name}
       </h3>
       <p className="text-gray-600 text-sm leading-relaxed mb-4">
-        {service.summary}
+        {service.description}
       </p>
       <div className="flex items-center text-accent text-sm font-medium group-hover:text-accent/80 transition-colors">
         Learn more

@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { services } from '@/data/services'
+import { allServices } from '@/data/services'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://noreenmostafavimd.com'
@@ -63,8 +63,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Dynamic service pages
-  const servicePages = services.map((service) => ({
-    url: `${baseUrl}${service.slug}`,
+  const servicePages = allServices.map((service) => ({
+    url: `${baseUrl}/${service.category}/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,

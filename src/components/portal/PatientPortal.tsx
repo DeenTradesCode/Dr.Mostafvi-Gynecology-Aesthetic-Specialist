@@ -7,15 +7,17 @@ import { AppointmentStep } from './steps/AppointmentStep'
 import { ReviewStep } from './steps/ReviewStep'
 import { ConfirmationStep } from './steps/ConfirmationStep'
 import { Dashboard } from './dashboard/Dashboard'
+import { PortalProvider } from '@/hooks/usePortalState'
 
 export function PatientPortal() {
   console.log('🏥 PatientPortal: Component rendered')
   
   return (
-    <div className="min-h-screen bg-bg-light dark:bg-bg-dark">
-      <Routes>
-        {/* Default portal route - redirect to access step */}
-        <Route path="/" element={<Navigate to="/portal/access" replace />} />
+    <PortalProvider>
+      <div className="min-h-screen bg-bg-light dark:bg-bg-dark">
+        <Routes>
+          {/* Default portal route - redirect to access step */}
+          <Route path="/" element={<Navigate to="/portal/access" replace />} />
 
         {/* Step 1: Access - Login or Guest */}
         <Route
@@ -78,9 +80,10 @@ export function PatientPortal() {
         {/* Dashboard for logged-in users */}
         <Route path="/dashboard" element={<Dashboard />} />
 
-        {/* Catch-all route */}
-        <Route path="*" element={<Navigate to="/portal/access" replace />} />
-      </Routes>
-    </div>
+          {/* Catch-all route */}
+          <Route path="*" element={<Navigate to="/portal/access" replace />} />
+        </Routes>
+      </div>
+    </PortalProvider>
   )
 }

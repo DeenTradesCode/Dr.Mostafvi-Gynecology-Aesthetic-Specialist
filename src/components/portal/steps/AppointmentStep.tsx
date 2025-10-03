@@ -9,7 +9,7 @@ export function AppointmentStep() {
   console.log('📅 AppointmentStep: Component rendered')
   
   const navigate = useNavigate()
-  const { updateAppointmentDetails, nextStep, patientInfo } = usePortalState()
+  const { updateAppointmentDetails, nextStep } = usePortalState()
   
   const [formData, setFormData] = useState({
     reason: '',
@@ -95,8 +95,9 @@ export function AppointmentStep() {
       // Update portal state with appointment details
       updateAppointmentDetails({
         serviceType: formData.reason,
-        appointmentDate: formData.appointmentDate,
-        appointmentTime: formData.appointmentTime
+        date: formData.appointmentDate,
+        time: formData.appointmentTime,
+        reason: formData.reason
       })
       
       console.log('📅 AppointmentStep: Moving to review step')

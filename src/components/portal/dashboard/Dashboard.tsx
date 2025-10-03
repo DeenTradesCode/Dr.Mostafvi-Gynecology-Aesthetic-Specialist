@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, Phone, Mail, Edit, Trash2, Plus } from 'lucide-react'
 
 export function Dashboard() {
+  console.log('📊 Dashboard: Component rendered')
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

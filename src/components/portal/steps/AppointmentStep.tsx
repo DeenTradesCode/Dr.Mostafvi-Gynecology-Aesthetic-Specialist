@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, FileText } from 'lucide-react'
 
 export function AppointmentStep() {
+  console.log('📅 AppointmentStep: Component rendered')
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

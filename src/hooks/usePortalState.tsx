@@ -280,6 +280,7 @@ export function PortalProvider({ children }: PortalProviderProps) {
 
       return { success: true }
     } catch (error) {
+      console.error('Booking completion error:', error)
       setLoading(false)
       return { 
         success: false, 

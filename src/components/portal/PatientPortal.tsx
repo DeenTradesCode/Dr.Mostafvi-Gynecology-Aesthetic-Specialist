@@ -9,6 +9,8 @@ import { ConfirmationStep } from './steps/ConfirmationStep'
 import { Dashboard } from './dashboard/Dashboard'
 
 export function PatientPortal() {
+  console.log('🏥 PatientPortal: Component rendered')
+  
   return (
     <div className="min-h-screen bg-bg-light dark:bg-bg-dark">
       <Routes>

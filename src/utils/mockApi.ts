@@ -93,6 +93,7 @@ const mockUnavailableReasons: Record<string, Record<string, string>> = {
 export const mockApi = {
   // Get available appointment slots for a specific date
   getAvailability: async (date: string): Promise<AvailabilityResponse> => {
+    console.log(`📅 MockAPI: Fetching availability for ${date}`)
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 500))
     
@@ -101,6 +102,8 @@ export const mockApi = {
     
     // Filter only available slots
     const filteredSlots = availableSlots.filter(slot => slot.available)
+    
+    console.log(`📅 MockAPI: Found ${filteredSlots.length} available slots for ${date}`)
     
     return {
       date,
@@ -111,6 +114,12 @@ export const mockApi = {
 
   // Book an appointment
   bookAppointment: async (request: AppointmentRequest): Promise<AppointmentResponse> => {
+    console.log('📝 MockAPI: Booking appointment', {
+      date: request.date,
+      time: request.time,
+      service: request.service_type,
+      isGuest: request.is_guest
+    })
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 800))
     
@@ -139,6 +148,8 @@ export const mockApi = {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 300))
     
+    console.log(`📊 MockAPI: Fetching appointments for patient ${patientId}`)
+    
     // Mock appointment data
     return [
       {
@@ -162,6 +173,8 @@ export const mockApi = {
   cancelAppointment: async (appointmentId: string): Promise<{ success: boolean; message: string }> => {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 400))
+    
+    console.log(`🗑️ MockAPI: Cancelling appointment ${appointmentId}`)
     
     return {
       success: true,

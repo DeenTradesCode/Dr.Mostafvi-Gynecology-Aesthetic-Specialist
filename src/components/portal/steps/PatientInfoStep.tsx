@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { User, Calendar, Phone, Mail, Shield } from 'lucide-react'
 
 export function PatientInfoStep() {
+  console.log('📝 PatientInfoStep: Component rendered')
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

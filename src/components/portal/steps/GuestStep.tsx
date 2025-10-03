@@ -6,6 +6,7 @@ export function GuestStep() {
   const navigate = useNavigate()
 
   const handleGuestContinue = () => {
+    console.log('👤 GuestStep: User selected guest mode')
     navigate('/portal/patient-info')
   }
 

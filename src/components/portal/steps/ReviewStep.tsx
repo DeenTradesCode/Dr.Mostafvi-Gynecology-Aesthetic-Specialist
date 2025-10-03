@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Check, Edit, Calendar, Clock } from 'lucide-react'
 
 export function ReviewStep() {
+  console.log('✅ ReviewStep: Component rendered')
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

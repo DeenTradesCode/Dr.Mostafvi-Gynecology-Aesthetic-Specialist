@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Calendar, Mail, Lock } from 'lucide-react'
 
 export function LoginStep() {
+  console.log('🔐 LoginStep: Component rendered')
+  
   return (
     <motion.div
       initial={{ opacity: 0, x: -30 }}

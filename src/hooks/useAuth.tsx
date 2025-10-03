@@ -95,8 +95,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
             error: null,
           })
         }
-      } catch (error) {
-        console.error('Auth initialization error:', error)
+    } catch (error) {
+      console.error('Auth initialization error:', error)
         setAuthState({
           user: null,
           isAuthenticated: false,
@@ -160,6 +160,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         return { success: false, error: 'Invalid email or password' }
       }
     } catch (error) {
+      console.error('Login error:', error)
       const errorMessage = 'Login failed. Please try again.'
       setAuthState(prev => ({
         ...prev,
@@ -203,6 +204,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       return { success: true }
     } catch (error) {
+      console.error('Registration error:', error)
       const errorMessage = 'Registration failed. Please try again.'
       setAuthState(prev => ({
         ...prev,
@@ -246,6 +248,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       return { success: true }
     } catch (error) {
+      console.error(`${provider} login error:`, error)
       const errorMessage = `${provider.charAt(0).toUpperCase() + provider.slice(1)} login failed. Please try again.`
       setAuthState(prev => ({
         ...prev,

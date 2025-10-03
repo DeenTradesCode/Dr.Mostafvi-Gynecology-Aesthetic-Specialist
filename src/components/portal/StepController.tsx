@@ -10,6 +10,7 @@ export function StepController({
   currentStep,
   totalSteps,
 }: StepControllerProps) {
+  console.log(`📊 StepController: Current step ${currentStep} of ${totalSteps}`)
   const steps = Array.from({ length: totalSteps }, (_, i) => i + 1)
 
   return (

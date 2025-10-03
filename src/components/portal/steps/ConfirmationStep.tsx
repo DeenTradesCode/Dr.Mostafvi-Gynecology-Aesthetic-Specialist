@@ -6,11 +6,13 @@ export function ConfirmationStep() {
   const navigate = useNavigate()
 
   const handleCreateAccount = () => {
+    console.log('🆕 ConfirmationStep: User wants to create account')
     // Navigate to account creation or dashboard
     console.log('Create account clicked')
   }
 
   const handleReturnHome = () => {
+    console.log('🏠 ConfirmationStep: User returning to home')
     navigate('/')
   }
 

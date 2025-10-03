@@ -47,10 +47,11 @@ export const messages = {
  * Validate a single field value against a validation rule
  */
 export const validateField = (
-  value: any,
+  value: unknown,
   rule: ValidationRule,
   fieldName?: string
 ): ValidationResult => {
+  console.log(`✅ Validation: Validating field "${fieldName || 'unknown'}" with value:`, value)
   const errors: string[] = []
   
   // Check if value is empty
@@ -104,7 +105,7 @@ export const validateField = (
  * Validate multiple fields against their validation rules
  */
 export const validateFields = (
-  data: Record<string, any>,
+  data: Record<string, unknown>,
   rules: FieldValidation
 ): Record<string, ValidationResult> => {
   const results: Record<string, ValidationResult> = {}
@@ -317,7 +318,7 @@ export const customValidators = {
 
 // Real-time validation hook helper
 export const createFieldValidator = (rules: FieldValidation) => {
-  return (fieldName: string, value: any, additionalData?: Record<string, any>) => {
+  return (fieldName: string, value: unknown, additionalData?: Record<string, unknown>) => {
     const rule = rules[fieldName]
     if (!rule) return { isValid: true, errors: [], firstError: undefined }
     
@@ -336,7 +337,7 @@ export const createFieldValidator = (rules: FieldValidation) => {
 
 // Form submission validation
 export const validateFormSubmission = (
-  data: Record<string, any>,
+  data: Record<string, unknown>,
   rules: FieldValidation = portalValidationRules
 ): { isValid: boolean; errors: Record<string, string[]>; hasErrors: boolean } => {
   const results = validateFields(data, rules)

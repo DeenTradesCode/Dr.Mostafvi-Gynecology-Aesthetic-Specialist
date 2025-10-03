@@ -8,7 +8,8 @@ export interface MaskingOptions {
   showAtSymbol?: boolean
 }
 
-// Default masking options based on prototype specifications
+// Default masking options based on prototype specifications (currently unused but kept for future use)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const DEFAULT_MASKING_OPTIONS: Record<string, MaskingOptions> = {
   email: {
     preserveFirst: 1,
@@ -19,7 +20,6 @@ const DEFAULT_MASKING_OPTIONS: Record<string, MaskingOptions> = {
   phone: {
     preserveFirst: 0,
     preserveLast: 4,
-    maskChar: '-',
     maskChar: '*',
   },
   dob: {
@@ -38,6 +38,7 @@ const DEFAULT_MASKING_OPTIONS: Record<string, MaskingOptions> = {
  * Mask email address following prototype specification: j***@gmail.com
  */
 export const maskEmail = (email: string): string => {
+  console.log(`🔒 DataMasking: Masking email ${email}`)
   if (!email || !email.includes('@')) return email
   
   const [localPart, domain] = email.split('@')
@@ -53,6 +54,7 @@ export const maskEmail = (email: string): string => {
  * Mask phone number following prototype specification: --1234
  */
 export const maskPhone = (phone: string): string => {
+  console.log(`🔒 DataMasking: Masking phone ${phone}`)
   if (!phone) return phone
   
   // Remove all non-digit characters

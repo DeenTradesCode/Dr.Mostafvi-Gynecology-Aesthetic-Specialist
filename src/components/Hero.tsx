@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion'
 import { Calendar, MapPin, Star } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 export function Hero() {
+  const navigate = useNavigate()
+
+  const handleBookAppointment = () => {
+    navigate('/portal')
+  }
+
   return (
     <section className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-bg-light to-lavender-mist/20 dark:from-bg-dark dark:to-gray-800/50">
       {/* Background Pattern */}
@@ -45,7 +52,7 @@ export function Hero() {
               className="mb-8 flex flex-wrap justify-center gap-4 lg:justify-start"
             >
               {['Gynecology', 'Aesthetic Medicine', 'Cosmetic Procedures'].map(
-                (specialty) => (
+                specialty => (
                   <span
                     key={specialty}
                     className="rounded-full bg-blush-rose/10 px-4 py-2 text-sm font-medium text-blush-rose dark:bg-blush-rose/20"
@@ -63,7 +70,10 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start"
             >
-              <button className="btn-primary flex items-center justify-center space-x-2">
+              <button
+                onClick={handleBookAppointment}
+                className="btn-primary flex items-center justify-center space-x-2"
+              >
                 <Calendar className="h-5 w-5" />
                 <span>Book Appointment</span>
               </button>

@@ -7,6 +7,7 @@ import { mockApi } from '@/utils/mockApi'
 
 export function AppointmentStep() {
   console.log('📅 AppointmentStep: Component rendered')
+  console.log('📅 AppointmentStep: This component should now be visible!')
   
   const navigate = useNavigate()
   const { updateAppointmentDetails, nextStep } = usePortalState()

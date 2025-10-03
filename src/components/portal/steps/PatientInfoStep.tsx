@@ -76,11 +76,18 @@ export function PatientInfoStep() {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    console.log('🚀 PatientInfoStep: Form submission started')
     console.log('📝 PatientInfoStep: Form submitted with data:', formData)
+    console.log('📝 PatientInfoStep: Current errors state:', errors)
     
-    if (validateForm()) {
+    const isValid = validateForm()
+    console.log('✅ PatientInfoStep: Validation result:', isValid)
+    
+    if (isValid) {
+      console.log('📝 PatientInfoStep: Validation passed, updating portal state')
+      
       // Update portal state with patient info
-      updatePatientInfo({
+      const patientData = {
         fullName: formData.fullName,
         dateOfBirth: formData.dateOfBirth,
         phoneNumber: formData.phoneNumber,
@@ -88,13 +95,27 @@ export function PatientInfoStep() {
         insuranceProvider: formData.insuranceProvider === 'other' 
           ? formData.otherInsuranceText 
           : formData.insuranceProvider
-      })
+      }
       
-      console.log('📝 PatientInfoStep: Moving to next step')
-      nextStep()
-      navigate('/portal/appointment')
+      console.log('📝 PatientInfoStep: Patient data to update:', patientData)
+      
+      try {
+        updatePatientInfo(patientData)
+        console.log('📝 PatientInfoStep: Portal state updated successfully')
+        
+        console.log('📝 PatientInfoStep: Calling nextStep()')
+        nextStep()
+        
+        console.log('📝 PatientInfoStep: Navigating to /portal/appointment')
+        navigate('/portal/appointment')
+        
+        console.log('🎉 PatientInfoStep: Navigation completed successfully')
+      } catch (error) {
+        console.error('❌ PatientInfoStep: Error during state update or navigation:', error)
+      }
     } else {
-      console.log('📝 PatientInfoStep: Form validation failed:', errors)
+      console.log('❌ PatientInfoStep: Form validation failed:', errors)
+      console.log('❌ PatientInfoStep: Validation errors after validateForm():', errors)
     }
   }
   

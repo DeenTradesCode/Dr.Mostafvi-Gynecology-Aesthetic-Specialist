@@ -114,12 +114,20 @@ export function PortalProvider({ children }: PortalProviderProps) {
 
   // Step navigation functions
   const goToStep = (step: number) => {
+    console.log(`🎯 usePortalState: goToStep called with step: ${step}`)
+    console.log(`🎯 usePortalState: Current step: ${portalState.currentStep}, Total steps: ${portalState.totalSteps}`)
+    
     if (step >= 1 && step <= portalState.totalSteps) {
-      setPortalState(prev => ({
-        ...prev,
-        currentStep: step,
-        errors: {}, // Clear errors when changing steps
-      }))
+      console.log(`🎯 usePortalState: Valid step, updating state`)
+      setPortalState(prev => {
+        const newState = {
+          ...prev,
+          currentStep: step,
+          errors: {}, // Clear errors when changing steps
+        }
+        console.log(`🎯 usePortalState: New state after goToStep:`, newState)
+        return newState
+      })
       
       // Update URL to match step
       const stepRoutes = [
@@ -131,14 +139,25 @@ export function PortalProvider({ children }: PortalProviderProps) {
       ]
       
       if (stepRoutes[step - 1]) {
-        navigate(stepRoutes[step - 1])
+        const targetRoute = stepRoutes[step - 1]
+        console.log(`🎯 usePortalState: Navigating to route: ${targetRoute}`)
+        navigate(targetRoute)
+      } else {
+        console.log(`🎯 usePortalState: No route found for step ${step}`)
       }
+    } else {
+      console.log(`🎯 usePortalState: Invalid step ${step}, not updating state or navigating`)
     }
   }
 
   const nextStep = () => {
+    console.log('➡️ usePortalState: nextStep called')
+    console.log(`➡️ usePortalState: Current step: ${portalState.currentStep}, Total steps: ${portalState.totalSteps}`)
     if (portalState.currentStep < portalState.totalSteps) {
+      console.log(`➡️ usePortalState: Moving to step ${portalState.currentStep + 1}`)
       goToStep(portalState.currentStep + 1)
+    } else {
+      console.log('➡️ usePortalState: Already at last step, cannot advance')
     }
   }
 
@@ -156,11 +175,16 @@ export function PortalProvider({ children }: PortalProviderProps) {
 
   // Data management functions
   const updatePatientInfo = (info: Partial<PatientInfo>) => {
-    setPortalState(prev => ({
-      ...prev,
-      patientInfo: { ...prev.patientInfo, ...info },
-      errors: {}, // Clear errors when updating data
-    }))
+    console.log('🔄 usePortalState: updatePatientInfo called with:', info)
+    setPortalState(prev => {
+      const newState = {
+        ...prev,
+        patientInfo: { ...prev.patientInfo, ...info },
+        errors: {}, // Clear errors when updating data
+      }
+      console.log('🔄 usePortalState: New state after updatePatientInfo:', newState)
+      return newState
+    })
   }
 
   const updateAppointmentDetails = (details: Partial<AppointmentDetails>) => {

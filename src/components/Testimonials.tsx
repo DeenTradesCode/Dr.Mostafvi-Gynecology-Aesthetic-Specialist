@@ -1,41 +1,19 @@
 import { motion } from 'framer-motion'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
-
-const testimonials = [
-  {
-    id: 1,
-    name: 'Sarah Johnson',
-    text: 'Dr. Mastafavi provided exceptional care during my procedure. Her expertise and compassion made me feel completely comfortable throughout the entire process.',
-    rating: 5,
-    date: '2 weeks ago',
-  },
-  {
-    id: 2,
-    name: 'Emily Chen',
-    text: "I've been seeing Dr. Mastafavi for years and she always takes the time to listen and explain everything clearly. Highly recommend her services!",
-    rating: 5,
-    date: '1 month ago',
-  },
-  {
-    id: 3,
-    name: 'Maria Rodriguez',
-    text: "The aesthetic treatments I received exceeded my expectations. Dr. Mastafavi's attention to detail and natural results are outstanding.",
-    rating: 5,
-    date: '3 weeks ago',
-  },
-]
+import { testimonialsContent } from '@/data/marketing'
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextTestimonial = () => {
-    setCurrentIndex(prev => (prev + 1) % testimonials.length)
+    setCurrentIndex(prev => (prev + 1) % testimonialsContent.length)
   }
 
   const prevTestimonial = () => {
     setCurrentIndex(
-      prev => (prev - 1 + testimonials.length) % testimonials.length
+      prev =>
+        (prev - 1 + testimonialsContent.length) % testimonialsContent.length
     )
   }
 
@@ -72,17 +50,19 @@ export function Testimonials() {
           >
             {/* Rating */}
             <div className="mb-6 flex justify-center">
-              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-6 w-6 fill-current text-yellow-400"
-                />
-              ))}
+              {[...Array(testimonialsContent[currentIndex].rating)].map(
+                (_, i) => (
+                  <Star
+                    key={i}
+                    className="h-6 w-6 fill-current text-yellow-400"
+                  />
+                )
+              )}
             </div>
 
             {/* Testimonial Text */}
             <blockquote className="mb-8 text-xl leading-relaxed text-text-primary-light dark:text-text-primary-dark md:text-2xl">
-              "{testimonials[currentIndex].text}"
+              "{testimonialsContent[currentIndex].text}"
             </blockquote>
 
             {/* Patient Info */}
@@ -92,10 +72,10 @@ export function Testimonials() {
               </div>
               <div className="text-left">
                 <div className="font-semibold text-heading-light dark:text-heading-dark">
-                  {testimonials[currentIndex].name}
+                  {testimonialsContent[currentIndex].name}
                 </div>
                 <div className="text-sm text-text-secondary-light dark:text-text-secondary-dark">
-                  {testimonials[currentIndex].date}
+                  {testimonialsContent[currentIndex].date}
                 </div>
               </div>
             </div>
@@ -111,7 +91,7 @@ export function Testimonials() {
             </button>
 
             <div className="flex space-x-2">
-              {testimonials.map((_, index) => (
+              {testimonialsContent.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}

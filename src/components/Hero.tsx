@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { heroContent } from '@/data/marketing'
 
 export function Hero() {
   const navigate = useNavigate()
+  const PrimaryCtaIcon = heroContent.primaryCta.icon
+  const SecondaryCtaIcon = heroContent.secondaryCta.icon
 
   const handleBookAppointment = () => {
-    navigate('/portal')
+    navigate(heroContent.primaryCta.href)
   }
 
   return (
@@ -29,8 +32,11 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="heading-xl mb-6 text-heading-light dark:text-heading-dark"
             >
-              Expert Care for{' '}
-              <span className="text-gradient">Women's Health</span>
+              {heroContent.headlinePrefix}
+              <span className="text-gradient">
+                {heroContent.headlineHighlight}
+              </span>
+              {heroContent.headlineSuffix ?? ''}
             </motion.h1>
 
             <motion.p
@@ -39,9 +45,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mb-8 max-w-2xl text-lg text-text-secondary-light dark:text-text-secondary-dark md:text-xl"
             >
-              Dr. Noreen Mastafavi provides comprehensive gynecology and
-              aesthetic services with a focus on personalized, compassionate
-              care for women of all ages.
+              {heroContent.description}
             </motion.p>
 
             {/* Specialties */}
@@ -51,16 +55,14 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mb-8 flex flex-wrap justify-center gap-4 lg:justify-start"
             >
-              {['Gynecology', 'Aesthetic Medicine', 'Cosmetic Procedures'].map(
-                specialty => (
-                  <span
-                    key={specialty}
-                    className="rounded-full bg-blush-rose/10 px-4 py-2 text-sm font-medium text-blush-rose dark:bg-blush-rose/20"
-                  >
-                    {specialty}
-                  </span>
-                )
-              )}
+              {heroContent.specialties.map(specialty => (
+                <span
+                  key={specialty}
+                  className="rounded-full bg-blush-rose/10 px-4 py-2 text-sm font-medium text-blush-rose dark:bg-blush-rose/20"
+                >
+                  {specialty}
+                </span>
+              ))}
             </motion.div>
 
             {/* CTA Buttons */}
@@ -74,12 +76,12 @@ export function Hero() {
                 onClick={handleBookAppointment}
                 className="btn-primary flex items-center justify-center space-x-2"
               >
-                <Calendar className="h-5 w-5" />
-                <span>Book Appointment</span>
+                <PrimaryCtaIcon className="h-5 w-5" />
+                <span>{heroContent.primaryCta.label}</span>
               </button>
               <button className="btn-outline flex items-center justify-center space-x-2">
-                <MapPin className="h-5 w-5" />
-                <span>View Location</span>
+                <SecondaryCtaIcon className="h-5 w-5" />
+                <span>{heroContent.secondaryCta.label}</span>
               </button>
             </motion.div>
 
@@ -97,11 +99,11 @@ export function Hero() {
                   ))}
                 </div>
                 <span className="text-sm text-text-secondary-light dark:text-text-secondary-dark">
-                  4.9/5 Rating
+                  {heroContent.trustSignals.ratingLabel}
                 </span>
               </div>
               <div className="text-sm text-text-secondary-light dark:text-text-secondary-dark">
-                500+ Happy Patients
+                {heroContent.trustSignals.totalPatientsLabel}
               </div>
             </motion.div>
           </motion.div>

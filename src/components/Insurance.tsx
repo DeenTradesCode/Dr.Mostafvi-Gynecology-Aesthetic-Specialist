@@ -1,16 +1,6 @@
 import { motion } from 'framer-motion'
 import { CheckCircle, Phone, Calendar } from 'lucide-react'
-
-const insurancePlans = [
-  'Blue Cross Blue Shield',
-  'Aetna',
-  'Cigna',
-  'UnitedHealthcare',
-  'Humana',
-  'Kaiser Permanente',
-  'Medicare',
-  'Medicaid',
-]
+import { insurancePlans, insuranceContent } from '@/data/marketing'
 
 export function Insurance() {
   return (
@@ -27,11 +17,10 @@ export function Insurance() {
           className="mb-16 text-center"
         >
           <h2 className="heading-lg mb-6 text-heading-light dark:text-heading-dark">
-            Insurance & Coverage
+            {insuranceContent.headline}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-text-secondary-light dark:text-text-secondary-dark">
-            We accept most major insurance plans to make quality care accessible
-            and affordable.
+            {insuranceContent.subheading}
           </p>
         </motion.div>
 
@@ -67,12 +56,14 @@ export function Insurance() {
 
             <div className="rounded-lg bg-blush-rose/10 p-6 dark:bg-blush-rose/20">
               <h4 className="mb-2 font-semibold text-heading-light dark:text-heading-dark">
-                Don't see your insurance?
+                {insuranceContent.callout.title}
               </h4>
               <p className="mb-4 text-text-secondary-light dark:text-text-secondary-dark">
-                Contact us to verify coverage or discuss payment options.
+                {insuranceContent.callout.description}
               </p>
-              <button className="btn-outline text-sm">Contact Us</button>
+              <button className="btn-outline text-sm">
+                {insuranceContent.callout.ctaLabel}
+              </button>
             </div>
           </motion.div>
 
@@ -85,23 +76,26 @@ export function Insurance() {
             className="rounded-2xl bg-gradient-to-br from-blush-rose/10 to-warm-bronze/10 p-8 dark:from-blush-rose/20 dark:to-warm-bronze/20"
           >
             <h3 className="mb-6 text-2xl font-semibold text-heading-light dark:text-heading-dark">
-              Verify Your Coverage
+              {insuranceContent.verificationSection.title}
             </h3>
 
             <p className="mb-8 text-text-secondary-light dark:text-text-secondary-dark">
-              Not sure if your insurance covers our services? We can help you
-              verify your coverage and estimate your out-of-pocket costs.
+              {insuranceContent.verificationSection.description}
             </p>
 
             <div className="space-y-4">
               <button className="btn-primary flex w-full items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call to Verify Coverage</span>
+                <span>
+                  {insuranceContent.verificationSection.primaryCtaLabel}
+                </span>
               </button>
 
               <button className="btn-secondary flex w-full items-center justify-center space-x-2">
                 <Calendar className="h-5 w-5" />
-                <span>Schedule Consultation</span>
+                <span>
+                  {insuranceContent.verificationSection.secondaryCtaLabel}
+                </span>
               </button>
             </div>
 
@@ -110,10 +104,9 @@ export function Insurance() {
                 Payment Options
               </h4>
               <ul className="space-y-1 text-sm text-text-secondary-light dark:text-text-secondary-dark">
-                <li>• Insurance billing</li>
-                <li>• Flexible payment plans</li>
-                <li>• HSA/FSA accepted</li>
-                <li>• Cash discounts available</li>
+                {insuranceContent.paymentOptions.map(option => (
+                  <li key={option}>• {option}</li>
+                ))}
               </ul>
             </div>
           </motion.div>

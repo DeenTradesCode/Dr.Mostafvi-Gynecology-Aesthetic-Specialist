@@ -1,19 +1,10 @@
 import { motion } from 'framer-motion'
-import { Calendar, Award, Users, Clock } from 'lucide-react'
-
-const credentials = [
-  'Board Certified Gynecologist',
-  'Aesthetic Medicine Specialist',
-  '15+ Years Experience',
-  '500+ Successful Procedures',
-]
-
-const stats = [
-  { icon: Users, label: 'Happy Patients', value: '500+' },
-  { icon: Clock, label: 'Years Experience', value: '15+' },
-  { icon: Award, label: 'Certifications', value: '8' },
-  { icon: Calendar, label: 'Procedures Done', value: '1000+' },
-]
+import { Calendar } from 'lucide-react'
+import {
+  doctorProfile,
+  doctorAdditionalBio,
+  doctorStats,
+} from '@/data/marketing'
 
 export function DoctorBio() {
   return (
@@ -36,11 +27,9 @@ export function DoctorBio() {
                     <span className="text-6xl">👩‍⚕️</span>
                   </div>
                   <h3 className="mb-2 text-3xl font-bold">
-                    Dr. Noreen Mastafavi
+                    {doctorProfile.name}
                   </h3>
-                  <p className="text-xl opacity-90">
-                    Gynecology & Aesthetic Specialist
-                  </p>
+                  <p className="text-xl opacity-90">{doctorProfile.title}</p>
                 </div>
               </div>
 
@@ -58,20 +47,15 @@ export function DoctorBio() {
             viewport={{ once: true }}
           >
             <h2 className="heading-lg mb-6 text-heading-light dark:text-heading-dark">
-              Meet Dr. Noreen Mastafavi
+              Meet {doctorProfile.name}
             </h2>
 
             <p className="mb-8 text-lg leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">
-              Dr. Mastafavi is a board-certified gynecologist with over 15 years
-              of experience in women's health and aesthetic medicine. She
-              combines her medical expertise with a passion for helping women
-              look and feel their best.
+              {doctorProfile.bio}
             </p>
 
             <p className="mb-8 text-lg leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">
-              Her approach focuses on personalized care, using the latest
-              techniques and technologies to provide safe, effective treatments
-              that enhance both health and confidence.
+              {doctorAdditionalBio}
             </p>
 
             {/* Credentials */}
@@ -80,7 +64,7 @@ export function DoctorBio() {
                 Credentials & Experience
               </h3>
               <div className="grid gap-3 sm:grid-cols-2">
-                {credentials.map((credential, index) => (
+                {doctorProfile.credentials.map((credential, index) => (
                   <motion.div
                     key={credential}
                     initial={{ opacity: 0, y: 20 }}
@@ -100,7 +84,7 @@ export function DoctorBio() {
 
             {/* Stats */}
             <div className="mb-8 grid grid-cols-2 gap-6 lg:grid-cols-4">
-              {stats.map((stat, index) => (
+              {doctorStats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}

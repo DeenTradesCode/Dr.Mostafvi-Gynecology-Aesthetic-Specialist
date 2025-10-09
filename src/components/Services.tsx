@@ -1,48 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, Heart, Sparkles, Scissors } from 'lucide-react'
-
-const services = [
-  {
-    id: 'gynecology',
-    title: 'Gynecology',
-    icon: Heart,
-    description: "Comprehensive women's health services",
-    services: [
-      'Annual Exams & Pap Smears',
-      'Family Planning & Contraception',
-      'Menopause Management',
-      'Pelvic Pain Treatment',
-      'Sexual Health Counseling',
-    ],
-  },
-  {
-    id: 'aesthetics',
-    title: 'Aesthetic Medicine',
-    icon: Sparkles,
-    description: 'Advanced cosmetic treatments',
-    services: [
-      'Botox & Dermal Fillers',
-      'Laser Treatments',
-      'Chemical Peels',
-      'Microneedling',
-      'Body Contouring',
-    ],
-  },
-  {
-    id: 'cosmetics',
-    title: 'Cosmetic Procedures',
-    icon: Scissors,
-    description: 'Surgical and non-surgical options',
-    services: [
-      'Vaginal Rejuvenation',
-      'Labiaplasty',
-      'Breast Procedures',
-      'Tummy Tuck',
-      'Liposuction',
-    ],
-  },
-]
+import { ChevronDown } from 'lucide-react'
+import { servicesContent } from '@/data/marketing'
 
 export function Services() {
   const [activeService, setActiveService] = useState<string | null>(null)
@@ -70,7 +29,7 @@ export function Services() {
         </motion.div>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {services.map((service, index) => (
+          {servicesContent.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
